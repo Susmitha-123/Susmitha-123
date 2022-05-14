@@ -1,0 +1,55 @@
+class icecream_menu:
+   
+    def init(self,ttype,flavor):
+        self.ttype=ttype
+        self.flavor=flavor
+    def display(self):
+        print(self.ttype,self.flavor)
+   
+class icecreamtype:
+    amt=0
+    def init(self,icetype):
+        self.icetype=icetype
+        print("Icecream type is : "+self.icetype)
+        if(self.icetype=='stick'):
+            self.amt=10
+            #return amt
+        elif(self.icetype=='cone'):
+            self.amt=20
+            #return amt
+        elif(self.icetype=='cup'):
+            self.amt=30
+            #return amt
+       
+class icecreamflavor:
+    #amt1=0
+    def init(self,iceflavor):
+        self.iceflavor=iceflavor
+        print("Icecream flavor is : "+self.iceflavor)
+        if(self.iceflavor=="venilla"):
+            self.amt1=10
+            #return amt1
+        elif(self.iceflavor=="chocolate"):
+            self.amt1=20
+            #return amt1
+        elif(self.iceflavor=="strawberry"):
+            self.amt1=30
+            #return amt1
+       
+    ## print(x,y)
+# obj=icecream_menu("stick","chocolate")
+print("ICECREAM TYPES\n1.Stick\n2.Cone\n3.Cup\n")
+print("ICECREAM FLAVOR\n1.Venilla\n2.chocolate\n3.Strawberry\n")
+
+a=input("Enter icecream type : ")
+b=input("Enter icecream flavor : ")
+# t1=obj.icecreamtype(a).show
+# t2=obj.icecreamflavor(b).sshow
+# # t3=obj.icecreamtype.amt
+# # t4=obj.icecreamflavor.amt1
+# print(t1,t2)
+obj1=icecreamtype(a)
+obj2=icecreamflavor(b)
+t1=obj1.amt
+t2=obj2.amt1
+print("Total amout is : ",t1+t2)
